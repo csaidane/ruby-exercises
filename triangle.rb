@@ -1,4 +1,3 @@
-1.
 # Class Triangle analyzes the lengths of the sides of a triangle
 # (represented by a, b and c) and returns the type of triangle.
 #
@@ -12,11 +11,11 @@
 class TriangleError < StandardError
   attr_accessor :a, :b, :c
   def evaluate
-    if a == b and b == c
+    if (a == b && b == c)
       return 'equilateral'
-    elsif (a == b and b != c) or (a == c and b != c) or (b == c and a != c)
+    elsif ((a == b && b != c) || (a == c && b != c) || (b == c && a != c))
       return 'isosceles'
-    elsif (a != b and a != c) and b != c
+    else
       return 'scalene'
     end
   end
