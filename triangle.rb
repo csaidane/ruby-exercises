@@ -9,6 +9,12 @@
 # The tests should be written for all cases
 
 class TriangleError < StandardError
+  def message
+    'sides are invalid'
+  end
+end
+
+class Triangle 
   attr_accessor :a, :b, :c
   def evaluate
     if (a == b && b == c)
